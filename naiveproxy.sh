@@ -64,7 +64,8 @@ installProxy(){
     ${PACKAGE_INSTALL[int]} curl wget sudo qrencode
 
     rm -f /usr/bin/caddy
-    wget https://gitlab.com/misakablog/naiveproxy-script/-/raw/main/files/caddy-linux-$(archAffix) -O /usr/bin/caddy
+    wget https://github.com/lxhao61/integrated-examples/releases/download/20221017/caddy-linux-$(archAffix).tar.gz -O /usr/bin/caddy.tar.gz
+    tar -xvf /usr/bin/caddy.tar.gz -C /usr/bin
     chmod +x /usr/bin/caddy
 
     mkdir /etc/caddy
